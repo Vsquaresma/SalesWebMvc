@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using SalesWebMvc.Data;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
+using SalesWebMvc.Services;
 
 namespace SalesWebMvc
 {
@@ -43,7 +44,7 @@ namespace SalesWebMvc
                         builder.MigrationsAssembly("SalesWebMvc")));
 
             services.AddScoped<SeedingService>();
-            //services.AddScoped<SellerService>();
+            services.AddScoped<SellerService>();
             //services.AddScoped<DepartmentService>();
             //services.AddScoped<SalesRecordService>();
         }
